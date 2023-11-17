@@ -15,7 +15,7 @@ app.use(express.json());
 
 // Define a route for the root directory ('/') to respond with a greeting message.
 app.get('/', (req, res) => {
-    res.json({ message: "Wizstack Student App" });
+    res.json({ message: "Wizstack Student Management App" });
 });
 
 app.use('/api', userRoutes);
