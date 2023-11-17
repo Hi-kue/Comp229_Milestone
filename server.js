@@ -10,7 +10,6 @@ const app = express();
 const connectDb = require('./src/db/config/config');
 connectDb();
 
-
 // we use json for the atlas
 app.use(express.json());
 
