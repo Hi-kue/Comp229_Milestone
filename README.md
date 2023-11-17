@@ -15,6 +15,8 @@
     <a href="https://github.com/Hi-kue/Wizstack/issues">Report Bug</a>
     ✧
     <a href="https://github.com/Hi-kue/Wizstack/issues">Request Feature</a>
+    ✧
+    <a href="/url">Documentation</a>
   </p>
 </div>
 <div align="center">
