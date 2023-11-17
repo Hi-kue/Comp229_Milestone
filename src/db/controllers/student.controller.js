@@ -5,7 +5,7 @@ const createUser = async (req, res) => {
 };
 
 const listAllUsers = async (req, res) => {
-    // pu logic to list all users
+    // put logic to list all users
 };
 
 const fetchUser = async (req, res) => {
