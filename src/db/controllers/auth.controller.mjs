@@ -8,7 +8,4 @@ const signOut = async (req, res) => {
     // put logic for user sign-out (if implemented)
 };
 
-module.exports = {
-    signIn,
-    signOut
-};
+export { signIn, signOut };
