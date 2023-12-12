@@ -4,12 +4,11 @@
   "version": "1.0.0b",
   "type": "module",
   "scripts": {
-    "start": "vite build && vite preview",
-    "start:backend": "nodemon --watch server --exec node server/server.js",
-    "start:frontend": "vite build && vite preview --port 8080",
-    "dev": "concurrently \"vite\" \"nodemon --watch server --exec node server/server.js\"",
-    "prod": "concurrently \"vite build\" \"nodemon --watch server --exec node server/server.js\" \"vite preview\"",
-    "build": "vite build",
+    "start": "concurrently \"npm run start:back\" \"npm run start:front\"",
+    "start:back": "nodemon server/server.js",
+    "start:front": "vite preview",
+    "build": "vite build && npm run build:back",
+    "build:back": "cd server && npm install",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "test": "jest --watchAll --verbose"
