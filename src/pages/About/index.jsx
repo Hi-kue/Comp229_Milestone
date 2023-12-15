@@ -1,6 +1,4 @@
 import React from 'react';
-import Navbar from '../../components/Navbar/Navbar';
-import Footer from '../../components/Footer/Footer';
 import tmonA from '../../assets/avatars/tmonA.png';
 import tmonB from '../../assets/avatars/tmonB.png';
 import tmonC from '../../assets/avatars/tmonC.png';
@@ -8,7 +6,6 @@ import tmonC from '../../assets/avatars/tmonC.png';
 export const About = () => {
     return (
         <div>
-            <Navbar />
             { /* About Section (IMPLEMENT SOON) */ }
 
             {/* Services & Features Section */}
@@ -213,7 +210,6 @@ export const About = () => {
                     </div>
                 </div>
             </section>
-            <Footer />
         </div>
     )
 }

@@ -2,7 +2,6 @@ import React from "react";
 import axiosInstance from "../../../services/axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import NavBar from "../../../components/Navbar/Navbar";
 
 function AdminDashBoard() {
   // const baseURL = "http://localhost:3000";
@@ -55,8 +54,6 @@ function AdminDashBoard() {
 
   return (
     <div>
-      <NavBar />
-
       <div
         id="element1"
         style={{

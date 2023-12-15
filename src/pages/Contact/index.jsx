@@ -1,7 +1,5 @@
 // Import Dependencies
 import React from 'react';
-import Navbar from '../../components/Navbar/Navbar.jsx';
-import Footer from '../../components/Footer/Footer.jsx';
 import styles from './contact.module.css';
 
 export const Contact = () => {
@@ -34,7 +32,6 @@ export const Contact = () => {
 
     return (
         <>
-            <Navbar />
             <section class="bg-gray-100">
                 <div class="container px-6 py-12 mx-auto">
                     <div>
@@ -135,7 +132,6 @@ export const Contact = () => {
                     </div>
                 </div>
             </section>
-            <Footer />
         </>
     )
 }

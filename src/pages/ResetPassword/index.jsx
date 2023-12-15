@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import NavBar from "../../components/Navbar/Navbar";
 
 export const ResetPassword = () => {
   const navigate = useNavigate();
