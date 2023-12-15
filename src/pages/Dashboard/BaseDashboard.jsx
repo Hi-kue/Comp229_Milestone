@@ -1,22 +1,34 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { useUser } from "../../contexts/UserContext.jsx";
-import { AdminDashboard } from "./Admin_Dashboard/index.jsx";
-import { UserDashboard } from "./Student_Dashboard/index.jsx";
+import AdminDashBoard from "./Admin_Dashboard/index.jsx";
+import StudentDashBoard from "./Student_Dashboard/index.jsx";
+import { SignIn } from '../Signin/index.jsx';
 
 export const BaseDashboard = () => {
     const { user, signout } = useUser();
     const isAdmin = user?.role === 'administrator';
-    const isAuthenticated = !!user;
+    const isAuthenticated = !!user.token;
 
     return (
         <>
             <div className="">
-                {!isAdmin && isAuthenticated ? (
-                    <UserDashboard />
+                {isAdmin ? (
+                    <AdminDashBoard />                    
                 ) : (
-                    <AdminDashboard />
+                    isAuthenticated ? (
+                        <StudentDashBoard />
+                    ) : (
+                        <SignIn />
+                    )
                 )}
+                {/*
+                {!isAdmin && isAuthenticated ? (
+                    <StudentDashBoard />
+                ) : (
+                    <AdminDashBoard />
+                )}
+                */}
             </div>
         </>
     );
