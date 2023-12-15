@@ -8,7 +8,7 @@ const Navbar = () => {
   // Variables from the context
   const { user, signout } = useUser();
   const isAdmin = user?.role === "administrator";
-  const isAuthenticated = !!user;
+  const isAuthenticated = !!user.token;
 
   return (
     <div className={styles.navbar_container}>
@@ -18,13 +18,7 @@ const Navbar = () => {
       </Link>
       {/* Navigation links */}
       <div className={styles.navbar_links}>
-        {/* {user.token && user.role === "administrator" && (
-          <Link to={"/admin_dashboard"}>DASHBOARD</Link>
-        )}
-        {user.token && user.role === "student" && (
-          <Link to={"/stu_dashboard"}>DASHBOARD</Link>
-        )} */}
-        <Link to={"/admin_dashboard"}>DASHBOARD</Link>
+        <Link to={"/dashboard"}>DASHBOARD</Link>
         <Link to={"/about"}>ABOUT</Link>
         <Link to={"/contact"}>CONTACT</Link>
         <Link to={"/"}>HOME</Link>
