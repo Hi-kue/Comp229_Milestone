@@ -14,6 +14,7 @@ import { Contact } from "./pages/Contact/index.jsx";
 import { SignUp } from "./pages/Signup/index.jsx";
 import { SignIn } from "./pages/Signin/index.jsx";
 import { UserProvider } from "./contexts/UserContext.jsx";
+import BaseDashboard from "./pages/Dashboard/BaseDashboard.jsx";
 import AdminDashBoard from "./pages/Dashboard/Admin_Dashboard/index.jsx";
 import StudentDashBoard from "./pages/Dashboard/Student_Dashboard/index.jsx";
 import { SearchByID } from "./pages/Dashboard/Admin_Dashboard/FindOneUser/index.jsx";
@@ -31,6 +32,7 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/signin" element={<SignIn />}></Route>
+        <Route path="/dashboard" element={<BaseDashboard />} />
         <Route path="/admin_dashboard" element={<AdminDashBoard />} />
         <Route path="/stu_dashboard" element={<StudentDashBoard />} />
         <Route path="/search_by_id" element={<SearchByID />} />
