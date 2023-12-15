@@ -2,7 +2,6 @@ import axiosInstance from "../../services/axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useUser } from "../../contexts/UserContext";
-import NavBar from "./../../components/Navbar/Navbar";
 
 export const SignIn = () => {
   const { user, signin, signout } = useUser(); // declare function from UserContext

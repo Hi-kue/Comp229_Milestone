@@ -1,5 +1,3 @@
-import Navbar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
 import { Link } from "react-router-dom";
 import { Card } from "../../components/Card/Card";
 import { Banner } from "../../components/Banner/Banner";
@@ -7,7 +5,6 @@ import { Banner } from "../../components/Banner/Banner";
 export const Home = () => {
     return (
         <>
-            <Navbar />
                 <Banner title="Already a member?" link="/signin" linkTitle="Sign In"/>
                 { /* Home Section */ }
                 <main class="bg-gray-100">
@@ -273,7 +270,6 @@ export const Home = () => {
                         </div>
                     </section>
                 </main>
-            <Footer />
         </>
     );
 };

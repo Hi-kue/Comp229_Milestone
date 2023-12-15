@@ -22,6 +22,8 @@ import { DeleteByID } from "./pages/Dashboard/Admin_Dashboard/DeleteUser/index.j
 import { UpdateUser } from "./pages/Dashboard/Admin_Dashboard/UpdateUser/index.jsx";
 import { ForgotPassword } from "./pages/ForgotPassword/index.jsx";
 import { ResetPassword } from "./pages/ResetPassword/index.jsx";
+import Navbar from "./components/Navbar/Navbar.jsx";
+import Footer from "./components/Footer/Footer.jsx";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -57,7 +59,9 @@ const Root = () => {
   return (
     <>
       <div>
+        <Navbar />
         <Outlet />
+        <Footer />
       </div>
     </>
   );
