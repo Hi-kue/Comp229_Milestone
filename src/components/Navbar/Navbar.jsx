@@ -28,7 +28,7 @@ const Navbar = () => {
         {isAdmin && <Link to={"/users"}>USERS</Link>}
         {isAuthenticated ? (
           <>
-            <Link to={"/profile"}>PROFILE</Link>
+            <Link to={"/reset_password"}>PROFILE</Link>
             <Link to={"/"} onClick={signout}>
               SIGN OUT
             </Link>
