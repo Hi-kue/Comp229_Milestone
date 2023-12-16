@@ -22,13 +22,6 @@ export const BaseDashboard = () => {
                         <SignIn />
                     )
                 )}
-                {/*
-                {!isAdmin && isAuthenticated ? (
-                    <StudentDashBoard />
-                ) : (
-                    <AdminDashBoard />
-                )}
-                */}
             </div>
         </>
     );
