@@ -7,8 +7,7 @@ import { Link } from "react-router-dom";
 const Navbar = () => {
   // Variables from the context
   const { user, signout } = useUser();
-  const isAdmin = user?.role === "administrator";
-  const isAuthenticated = !!user.token;
+  const isAuthenticated = !!user;
 
   return (
     <div className={styles.navbar_container}>
@@ -25,10 +24,9 @@ const Navbar = () => {
       </div>
       {/* Action links based on user authentication and role */}
       <div className={styles.navbar_actions}>
-        {isAdmin && <Link to={"/users"}>USERS</Link>}
         {isAuthenticated ? (
           <>
-            <Link to={"/profile"}>PROFILE</Link>
+            <Link to={"/reset_password"}>PROFILE</Link>
             <Link to={"/"} onClick={signout}>
               SIGN OUT
             </Link>

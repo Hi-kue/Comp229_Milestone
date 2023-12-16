@@ -10,33 +10,30 @@ const UserContext = createContext();
  * @returns - User context provider.
  */
 export const UserProvider = ({ children }) => {
-  // State to hold user information
-  const [user, setUser] = useState({
-    token: "",
-    role: "",
-  });
+    // State to hold user information
+    const [user, setUser] = useState(null);
 
-  // Function to handle user signin
-  const signin = (token, role) => {
-    // Decode the token to get user data and set user with data
-    //const decodedUser = jwtDecode(token);
-    setUser({ token, role });
-  };
+    // Function to handle user signin
+    const signin = (token) => {
+        // Decode the token to get user data and set user with data
+        const decodedUser = jwtDecode(token);
+        setUser(decodedUser);
+    }
 
-  // Function to handle user signout
-  const signout = () => {
-    setUser(null);
-  };
+    // Function to handle user signout
+    const signout = () => {
+        setUser(null);
+    };
 
-  // Provide the user state and functions to the components within the context
-  return (
-    <UserContext.Provider value={{ user, setUser, signin, signout }}>
-      {children}
-    </UserContext.Provider>
-  );
+    // Provide the user state and functions to the components within the context
+    return (
+        <UserContext.Provider value={{user, signin, signout}}>
+            {children}
+        </UserContext.Provider>
+    );
 };
 
 // Hook to easily access the user context within components
 export const useUser = () => {
-  return useContext(UserContext);
-};
+    return useContext(UserContext);
+}

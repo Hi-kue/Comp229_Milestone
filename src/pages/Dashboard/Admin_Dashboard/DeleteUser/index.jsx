@@ -2,7 +2,6 @@ import React from 'react';
 import axiosInstance from "../../../../services/axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../../../../components/Navbar/Navbar";
 
 export const DeleteByID = () => {
   // const baseURL = "http://localhost:3000";
@@ -38,7 +37,6 @@ export const DeleteByID = () => {
 
   return (
     <div>
-      <Navbar />
       <form>
         <h2 style={{ color: "gray", textAlign: "center" }}>Enter User ID:</h2>
         <div

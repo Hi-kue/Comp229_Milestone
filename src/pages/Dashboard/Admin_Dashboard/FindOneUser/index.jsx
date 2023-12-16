@@ -2,7 +2,6 @@ import React from 'react';
 import axiosInstance from "../../../../services/axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../../../../components/Navbar/Navbar";
 
 export const SearchByID = () => {
   // const baseURL = "http://localhost:3000";
@@ -40,7 +39,6 @@ export const SearchByID = () => {
 
   return (
     <div>
-      <Navbar />
       <form>
         <h2 style={{ color: "gray", textAlign: "center" }}>Enter User ID:</h2>
         <div

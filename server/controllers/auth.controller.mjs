@@ -25,7 +25,7 @@ const generateToken = (id, role) => {
  * @param {*} res
  */
 const createSendToken = (user, statusCode, res) => {
-  const token = generateToken(user._id);
+  const token = generateToken(user._id,user.role);
   res.status(statusCode).json({
     status: "Success",
     token,
@@ -289,7 +289,7 @@ const signOut = catchAsync(async (req, res, next) => {
   let token;
 
   if (currentUser) {
-    token = jwt.sign(currentUser._id, process.env.JWT_SECRET, {
+    token = jwt.sign({ id: currentUser._id, role: currentUser.role }, process.env.JWT_SECRET, {
       expiresIn: process.env.JWT_EXPIRES_IN_FOR_LOGOUT,
     });
   }

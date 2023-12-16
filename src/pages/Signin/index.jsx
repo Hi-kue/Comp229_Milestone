@@ -36,11 +36,8 @@ export const SignIn = () => {
       });
       console.log(response);
       window.alert(response.data.status);
-      // const token = response.data.token;
-      // const role = response.data.user.role;
-      // signin(token, role);
-      // console.log(token, role);
-      // console.log(user);
+      const token = response.data.token;
+      signin(token);
       navigate("/");
     } catch (err) {
       console.log(err);

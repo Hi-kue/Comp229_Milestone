@@ -8,7 +8,7 @@ import { SignIn } from '../Signin/index.jsx';
 export const BaseDashboard = () => {
     const { user, signout } = useUser();
     const isAdmin = user?.role === 'administrator';
-    const isAuthenticated = !!user.token;
+    const isAuthenticated = !!user;
 
     return (
         <>
@@ -22,13 +22,6 @@ export const BaseDashboard = () => {
                         <SignIn />
                     )
                 )}
-                {/*
-                {!isAdmin && isAuthenticated ? (
-                    <StudentDashBoard />
-                ) : (
-                    <AdminDashBoard />
-                )}
-                */}
             </div>
         </>
     );

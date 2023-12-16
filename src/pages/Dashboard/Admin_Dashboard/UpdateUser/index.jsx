@@ -2,7 +2,6 @@ import axiosInstance from "../../../../services/axios";
 import { useState } from "react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Navbar from "../../../../components/Navbar/Navbar";
 
 export const UpdateUser = () => {
   // const baseURL = "http://localhost:3000";
