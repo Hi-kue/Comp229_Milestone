@@ -8,7 +8,7 @@ const Navbar = () => {
   // Variables from the context
   const { user, signout } = useUser();
   const isAdmin = user?.role === "administrator";
-  const isAuthenticated = !!user.token;
+  const isAuthenticated = !!user;
 
   return (
     <div className={styles.navbar_container}>
